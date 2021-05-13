@@ -1,0 +1,12 @@
+#container {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 1rem;
+  font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container p {
+  margin: 0rem;
+}
