@@ -4,7 +4,7 @@ function drawRhombus(height) {
   let array = [];
   let html = '';
   
-  for (let i = 1; i <= height / 2 + 1; i++) {
+  for (let i = 1; i < (height / 2 + 1); i++) {
     array = [];
     
     for (let j = 1; j <= i; j++) {
@@ -13,10 +13,10 @@ function drawRhombus(height) {
     html += `<p>${array.join('')}</p>`;
   }
 
-  for (let i = array.length; i < height; i++) {
+  for (let i = (array.length + 1); i <= height; i++) {
     array = [];
     
-    for (let j = 1; j <= height + 1 - i; j++) {
+    for (let j = 1; j <= (height + 1 - i); j++) {
       array.push(`<span style="color: rgb(${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)}">*</span>`);
     }
     html += `<p>${array.join('')}</p>`;
@@ -28,7 +28,6 @@ function drawRhombus(height) {
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 
 
@@ -52,8 +51,4 @@ function getRandomInteger(min, max) {
 //   }
 
 //   document.getElementById('container').innerHTML = html;
-// }
-
-// function getRandomInteger(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
